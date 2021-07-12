@@ -1,0 +1,70 @@
+#LoginPageI {
+  margin-top: 7rem;
+  @include media('<=900px') {
+    margin-top: 0rem;
+  }
+  box-shadow: 0px 10px 30px 0px #d6d6d6;
+
+  padding: 1rem 1.2rem;
+  display: flex;
+  border-radius: 2rem;
+  background: rgb(247, 249, 255);
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  #leftDivision {
+    padding: 2rem;
+  }
+  #rightDivision {
+    input {
+      font-size: 1.7rem;
+      border-radius: 1.2rem;
+      height: 5rem;
+    }
+
+    padding: 3.5rem 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    #defaultFormLable {
+      padding: 1.5rem 0rem;
+      font-size: 1.5rem;
+    }
+
+    #radioContainer {
+      justify-content: space-evenly;
+      display: flex;
+      //   background: grey;
+    }
+  }
+}
+
+.radioCard {
+  height: 4rem;
+  justify-content: space-evenly;
+  .form-check {
+    margin-top: 1rem;
+  }
+  font-size: 1.7rem;
+  align-items: center;
+  display: flex;
+  background: white;
+  width: 15rem;
+  border-radius: 1rem;
+  border: 2px solid rgb(244, 246, 250);
+}
+
+.formSubmitContainer {
+  padding: 2rem 0rem 0rem 0rem;
+  button {
+    font-size: 2rem;
+    border-radius: 1.2rem;
+
+    width: 100%;
+    height: 5.7rem;
+  }
+  display: flex;
+  justify-content: center;
+}
