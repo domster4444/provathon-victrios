@@ -14,6 +14,14 @@ import Modal from 'react-bootstrap/Modal';
 import DashboardBody from './Dashboard/DashboardBody';
 // --dashboard bdy
 
+import RecoveredPatientBody from './Dashboard/RecoveredPatientBody';
+import UpdateOxyCylBody from './Dashboard/UpdateNoOfCylinder';
+import UpdateBedAvailableBody from './Dashboard/UpdateNoOfBed';
+import UpdateSingleVacPatientBody from './Dashboard/UpdateSingleVacPatient';
+import UpdateDoubleVacPatientBody from './Dashboard/UpdateDoubleVacPatient';
+import UpdateTripleCovidPatientBody from './Dashboard/UpdateTripleVacPatient';
+import UpdateTotalCovidBody from './Dashboard/UpdateTotalCovidPatient';
+
 // ==========IMG
 import hospitalIco from '../../img/generalImage/hospital.png';
 import singleVaccinatedIco from '../../img/DashboardSideIco/singleVaccinatedIco.png';
@@ -396,6 +404,78 @@ const DashboardPage = (props) => {
               )}
             />
             {/*//? __________end______BODY CONTENT  */}
+
+            <Route
+              exact
+              path="/recoveredpatient"
+              component={() => (
+                <RecoveredPatientBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
+            {/* //!--update  */}
+            <Route
+              exact
+              path="/update-oxy-available"
+              component={() => (
+                <UpdateOxyCylBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/update-bed-available"
+              component={() => (
+                <UpdateBedAvailableBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/update-net-single-vac-patient"
+              component={() => (
+                <UpdateSingleVacPatientBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/update-net-double-vac-patient"
+              component={() => (
+                <UpdateDoubleVacPatientBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/update-net-triple-vac-patient"
+              component={() => (
+                <UpdateTripleCovidPatientBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/update-total-covid-no"
+              component={() => (
+                <UpdateTotalCovidBody
+                  setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                />
+              )}
+            />
           </div>
         </div>
       </Router>
