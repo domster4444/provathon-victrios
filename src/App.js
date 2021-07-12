@@ -1,32 +1,21 @@
 import React from 'react';
 import './scss/main.css';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 export default function App() {
   return (
     <div>
       <main id="Navigation">
-        <div id="logo">
-          <span>Kshitiz</span> Shah
-        </div>
-        <section id="navigation_section">
-          <header id="navigation_section_header">
-            <nav id="navBar">
-              <ul>
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Resume</a>
-                </li>
-                <li>
-                  <a href="#">Works</a>
-                </li>
-                <li>
-                  <a href="#">Contacts</a>
-                </li>
-              </ul>
-            </nav>
-          </header>
-        </section>
+        <Accordion defaultActiveKey="0">
+          <Card>
+            <Accordion.Toggle as={Card.Header} eventKey="1">
+              Click me!
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>Hello! I'm another body</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
       </main>
     </div>
   );
