@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PrivateRoute = () => {
+const PrivateRoute = (props) => {
   return <div>THIS IS PRIVATE ROUTE</div>;
 };
 

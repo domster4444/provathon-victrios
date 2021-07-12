@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CovidStatus() {
+function CovidStatus(props) {
   return <div>covid status page</div>;
 }
 

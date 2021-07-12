@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RegisterPageI = () => {
+const RegisterPageI = (props) => {
   return <div>register page</div>;
 };
 

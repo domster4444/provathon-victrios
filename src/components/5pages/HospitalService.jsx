@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HospitalService = () => {
+const HospitalService = (props) => {
   return <div>hospital serveice</div>;
 };
 
