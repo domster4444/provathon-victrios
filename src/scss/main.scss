@@ -54,3 +54,10 @@
 
 @import '5-modules/dashboardNav';
 @import '5-modules/dashboardToolbar';
+//! __________BUG FIX
+.contentBlock {
+  flex-wrap: wrap;
+  display: flex;
+  width: 65% !important;
+  justify-content: center;
+}

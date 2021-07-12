@@ -2796,3 +2796,10 @@ body {
   margin: 0rem 0rem 0rem 1rem;
   font-size: 2.9rem;
 }
+
+.contentBlock {
+  flex-wrap: wrap;
+  display: flex;
+  width: 65% !important;
+  justify-content: center;
+}
