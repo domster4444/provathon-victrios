@@ -1,0 +1,30 @@
+#covidFact {
+  .card {
+    border: none;
+    background-color: rgb(75, 97, 209);
+  }
+  .card-header {
+    border: none;
+    &:hover {
+      background-color: rgb(104, 125, 233);
+    }
+  }
+  #covidFactWarningIco {
+    margin-right: 2rem;
+    color: white;
+  }
+  .card-header {
+    justify-content: flex-start;
+  }
+  font-size: 2.1rem;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  ul {
+    padding-left: 2rem;
+    li {
+      color: white;
+      font-size: 1.6rem;
+    }
+  }
+}

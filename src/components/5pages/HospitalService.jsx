@@ -387,17 +387,7 @@ const DashboardBody = () => {
                                                   }
                                                 </td>
                                               </tr>
-                                              {/* <tr>
-                                                <td className="poppins_semibold_600">
-                                                  No of Triple Vaccine Patient
-                                                </td>
-                                                <td>
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .noOfTripleVaccinatedPatient
-                                                  }
-                                                </td>
-                                              </tr> */}
+
                                               <tr>
                                                 <td className="poppins_semibold_600">
                                                   No of total covid patient

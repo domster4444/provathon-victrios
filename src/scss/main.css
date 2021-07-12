@@ -1353,26 +1353,6 @@ h6 {
   }
 }
 
-@font-face {
-  font-family: 'roboto_300';
-  src: url("../fonts/Roboto-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'roboto_400';
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'roboto_500';
-  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'roboto_600';
-  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
-}
-
 .flexContainer {
   display: flex;
   justify-content: center;
@@ -1522,6 +1502,10 @@ h6 {
 }
 
 a {
+  text-decoration: none !important;
+}
+
+a {
   text-decoration: none;
   color: black;
 }
@@ -1656,102 +1640,6 @@ a:visited {
   transform: scale(1.04);
 }
 
-#mainFooter {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  color: white;
-  background-color: #09142e;
-}
-
-#mainFooter .greyBox {
-  margin: 4rem 1rem 0rem 1rem;
-  border-radius: 0.8rem;
-  padding: 1rem;
-  font-size: 1.4rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  max-width: 90rem;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 1000px) {
-  #mainFooter .greyBox {
-    width: 90%;
-  }
-}
-
-#mainFooter h1 {
-  margin-left: 25%;
-  font-size: 2.7rem;
-}
-
-#mainFooter footer {
-  padding-top: 0.6rem;
-  display: flex;
-  justify-content: "";
-  align-items: center;
-  flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 979px) {
-  #mainFooter footer {
-    display: flex;
-    justify-content: center;
-    align-items: "";
-    flex-wrap: wrap;
-  }
-}
-
-#mainFooter footer section {
-  position: relative;
-  margin: 3rem 8rem 0rem 8rem;
-}
-
-@media (max-width: 979px) {
-  #mainFooter footer section {
-    margin: 3rem 12rem 0rem 12rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #mainFooter footer section {
-    margin: 3rem 4rem 0rem 4rem;
-  }
-}
-
-#mainFooter footer section .logo {
-  position: absolute;
-  top: -1rem;
-  left: -5rem;
-  font-size: 3.5rem;
-}
-
-#mainFooter footer section .logo img {
-  width: 3.7rem;
-  height: 4.1rem;
-}
-
-#mainFooter footer section a {
-  color: white;
-}
-
-#mainFooter footer section ul li {
-  margin-top: 1rem;
-  list-style: none;
-  font-size: 1.4rem;
-}
-
-#mainFooter footer section ul li:hover {
-  text-decoration: underline;
-}
-
-#mainFooter footer section h3 {
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-}
-
 #navBar {
   padding: 0.5rem 0rem;
   display: flex;
@@ -1824,6 +1712,44 @@ a:visited {
 
 #dropdown-basic {
   font-size: 2rem !important;
+}
+
+#covidFact {
+  font-size: 2.1rem;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#covidFact .card {
+  border: none;
+  background-color: #4b61d1;
+}
+
+#covidFact .card-header {
+  border: none;
+}
+
+#covidFact .card-header:hover {
+  background-color: #687de9;
+}
+
+#covidFact #covidFactWarningIco {
+  margin-right: 2rem;
+  color: white;
+}
+
+#covidFact .card-header {
+  justify-content: flex-start;
+}
+
+#covidFact ul {
+  padding-left: 2rem;
+}
+
+#covidFact ul li {
+  color: white;
+  font-size: 1.6rem;
 }
 
 #hospital-service-page_heading {
