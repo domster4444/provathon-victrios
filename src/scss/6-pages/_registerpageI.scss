@@ -1,0 +1,49 @@
+#RegisterPageI {
+  box-shadow: 0px 10px 30px 0px #d6d6d6;
+  margin-bottom: 5rem;
+  #myInputautocomplete-list {
+    box-shadow: 0px 10px 2px 2px lightgray;
+    div {
+      padding: 0.5rem 1rem;
+      font-size: 2rem;
+      border-radius: 0.5rem;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(219, 222, 230);
+      }
+    }
+  }
+  padding: 1rem 1.2rem;
+  display: flex;
+  border-radius: 2rem;
+  background: rgb(247, 249, 255);
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  #leftDivision {
+  }
+  #rightDivision {
+    input {
+      font-size: 1.7rem;
+      border-radius: 0.5rem;
+      height: 4rem;
+    }
+
+    padding: 3.5rem 1rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    #defaultFormLable {
+      padding: 1.5rem 0rem;
+      font-size: 1.5rem;
+    }
+
+    #radioContainer {
+      justify-content: space-evenly;
+      display: flex;
+      //   background: grey;
+    }
+  }
+}

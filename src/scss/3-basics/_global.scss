@@ -10,6 +10,7 @@
 }
 
 .contentBlock {
+  justify-content: center;
   @include media('<=1351px') {
     width: 90% !important;
   }
