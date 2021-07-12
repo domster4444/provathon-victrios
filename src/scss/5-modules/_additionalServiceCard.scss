@@ -1,0 +1,31 @@
+//? _________________CORE GOAL  HOMEPAGE SECTION TWO
+.blueText {
+  margin-top: 2rem;
+  color: $royal_blue;
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
+}
+.AdditionalserviceCard {
+  transition: all 300ms ease-in-out;
+  border-radius: 1rem;
+  // box-shadow: 0px 0px 8px 2px rgb(240, 244, 251);
+  padding: 1rem;
+  background: $primary_white;
+  margin: 1rem 1rem;
+
+  &:hover {
+    background: linear-gradient(0deg, #e9f6ff 55%, $primary_white 93%);
+    transform: scale(1.1);
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+    color: $royal_blue_peace;
+    font-size: 1.2rem;
+  }
+  h2 {
+    transition: all 300ms ease-in-out;
+    color: black;
+    font-size: 1.3rem;
+  }
+}

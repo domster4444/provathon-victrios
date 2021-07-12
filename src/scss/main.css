@@ -1363,12 +1363,11 @@ h6 {
 }
 
 .containerCenter {
-  display: flex !important;
-  justify-content: center !important;
+  display: flex;
+  justify-content: center;
 }
 
 .contentBlock {
-  justify-content: center !important;
   display: flex;
   width: 65% !important;
 }
@@ -2151,6 +2150,38 @@ body::-webkit-scrollbar-thumb {
 
 .toastProgress {
   background: #333f48 !important;
+}
+
+.blueText {
+  margin-top: 2rem;
+  color: #0065ff;
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.AdditionalserviceCard {
+  transition: all 300ms ease-in-out;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: white;
+  margin: 1rem 1rem;
+}
+
+.AdditionalserviceCard:hover {
+  background: linear-gradient(0deg, #e9f6ff 55%, white 93%);
+  transform: scale(1.1);
+}
+
+.AdditionalserviceCard h4 {
+  margin-bottom: 0.5rem;
+  color: #a8a5ed;
+  font-size: 1.2rem;
+}
+
+.AdditionalserviceCard h2 {
+  transition: all 300ms ease-in-out;
+  color: black;
+  font-size: 1.3rem;
 }
 
 #hospital-service-page_heading {
