@@ -1,0 +1,27 @@
+.plasmaFieldSearchInput {
+  width: 50rem;
+  margin: 2rem 0rem;
+  height: 5rem;
+  font-size: 1.7rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+#myInputautocomplete-list {
+  position: absolute;
+  border-radius: 0.2rem;
+  background-color: white;
+  box-shadow: 0px 10px 2px 2px lightgray;
+  div {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(219, 222, 230);
+    }
+  }
+}
+.home_content {
+  overflow-y: scroll;
+}

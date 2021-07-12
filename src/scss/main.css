@@ -848,7 +848,8 @@ https://flickity.metafizzy.co
 
 .hint--bounce:before,
 .hint--bounce:after {
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.3s ease, visibility 0.3s ease,
+    transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }
 
 .hint--no-shadow:before,
@@ -1410,7 +1411,13 @@ h6 {
   flex-wrap: wrap;
 }
 
-.iconContainer .circleStructure, .iconContainer .blueCircle, .iconContainer .redCircle, .iconContainer .greenCircle, .iconContainer .purpleCircle, .iconContainer .goldCircle, .iconContainer .pinkCircle {
+.iconContainer .circleStructure,
+.iconContainer .blueCircle,
+.iconContainer .redCircle,
+.iconContainer .greenCircle,
+.iconContainer .purpleCircle,
+.iconContainer .goldCircle,
+.iconContainer .pinkCircle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1511,7 +1518,8 @@ a {
   color: black;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #e01e26;
 }
 
@@ -1519,7 +1527,12 @@ a:visited {
   text-decoration: none;
 }
 
-.poppins_base, .poppins_light_300, .poppins_regular_400, .poppins_medium_500, .poppins_semibold_600, .poppins_bold_700 {
+.poppins_base,
+.poppins_light_300,
+.poppins_regular_400,
+.poppins_medium_500,
+.poppins_semibold_600,
+.poppins_bold_700 {
   font-family: 'Poppins', sans-serif;
 }
 
