@@ -36,8 +36,6 @@
 @import '5-modules/header';
 @import '5-modules/headAccordion';
 @import '5-modules/homapageNav';
-@import '5-modules/dashboardNav';
-@import '5-modules/dashboardToolbar';
 @import '5-modules/customScrollbar';
 @import '5-modules/notification';
 
@@ -47,3 +45,7 @@
 @import '6-pages/loginPageI';
 @import '6-pages/dashboardBody';
 @import '6-pages/dashboardHomeBody';
+@import '6-pages/recoveredPatientBody';
+
+@import '5-modules/dashboardNav';
+@import '5-modules/dashboardToolbar';
