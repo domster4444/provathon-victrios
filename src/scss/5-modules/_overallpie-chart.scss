@@ -1,0 +1,8 @@
+@import '../5-modules/pie-chart';
+@import '../5-modules/doughnut-chart';
+.dualChartContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}

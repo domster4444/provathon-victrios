@@ -1918,6 +1918,213 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
 }
 
+#heroSection {
+  width: 172.3rem;
+  height: 75rem;
+  display: flex;
+  align-items: center;
+  background-position-y: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/general/herosection-bg.jpg);
+}
+
+@media (max-width: 788px) {
+  #heroSection {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 788px) {
+  #heroSection {
+    height: 60vw;
+  }
+}
+
+#heroSection h1 {
+  font-size: 5.6rem;
+  color: #00234b;
+}
+
+@media (max-width: 788px) {
+  #heroSection h1 {
+    font-size: 2.6rem;
+  }
+}
+
+#heroSection h2 {
+  color: #00234b;
+}
+
+@media (max-width: 788px) {
+  #heroSection h2 {
+    font-size: 1.6rem;
+  }
+}
+
+#heroSection button {
+  box-shadow: 0px 10px 30px 0px rgba(44, 130, 237, 0.4) !important;
+  background: #0065ff;
+  margin-top: 2rem;
+  font-size: 2.17rem;
+  padding: 0.5rem 2rem;
+}
+
+@media (max-width: 788px) {
+  #heroSection button {
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 1.6rem;
+  }
+}
+
+#dropdown-basic {
+  background: transparent !important;
+  font-size: 2.1rem;
+  border: none;
+  color: black;
+}
+
+.dropdown-menu.show {
+  transform: scale(1.5) !important;
+  top: 6rem !important;
+  left: 3rem !important;
+}
+
+#setInitialDetails-Model {
+  z-index: 1000;
+}
+
+.modal-backdrop.show {
+  z-index: 1;
+}
+
+.modal-content {
+  width: 100% !important;
+}
+
+.modal-content label {
+  font-size: 1.5rem;
+}
+
+.modal-content input {
+  font-size: 1.8rem;
+  height: 5rem;
+}
+
+.modal-content input :placeholder-shown {
+  font-size: 1.8rem;
+}
+
+.modal-content #initail-setup-detail-title {
+  width: 100%;
+  color: #007bff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.modal-content .setup-detail-subTitle {
+  width: 100%;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem !important;
+}
+
+#pie-chart {
+  width: 45rem !important;
+}
+
+@media (max-width: 1100px) {
+  #pie-chart {
+    width: 45rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #pie-chart {
+    width: 42rem !important;
+  }
+}
+
+@media (max-width: 788px) {
+  #pie-chart {
+    width: 40rem !important;
+  }
+}
+
+@media (max-width: 720px) {
+  #pie-chart {
+    width: 30rem !important;
+  }
+}
+
+#doughnut-chart {
+  width: 45rem !important;
+}
+
+@media (max-width: 1100px) {
+  #doughnut-chart {
+    width: 45rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #doughnut-chart {
+    width: 42rem !important;
+  }
+}
+
+@media (max-width: 788px) {
+  #doughnut-chart {
+    width: 40rem !important;
+  }
+}
+
+@media (max-width: 720px) {
+  #doughnut-chart {
+    width: 30rem !important;
+  }
+}
+
+.dualChartContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#pie-chart {
+  width: 45rem !important;
+}
+
+@media (max-width: 1100px) {
+  #pie-chart {
+    width: 45rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #pie-chart {
+    width: 42rem !important;
+  }
+}
+
+@media (max-width: 788px) {
+  #pie-chart {
+    width: 40rem !important;
+  }
+}
+
+@media (max-width: 720px) {
+  #pie-chart {
+    width: 30rem !important;
+  }
+}
+
 #hospital-service-page_heading {
   margin-top: 5rem;
   margin-bottom: 5rem;

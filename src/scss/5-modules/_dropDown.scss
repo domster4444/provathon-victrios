@@ -1,0 +1,11 @@
+#dropdown-basic {
+  background: transparent !important;
+  font-size: 2.1rem;
+  border: none;
+  color: black;
+}
+.dropdown-menu.show {
+  transform: scale(1.5) !important;
+  top: 6rem !important;
+  left: 3rem !important;
+}

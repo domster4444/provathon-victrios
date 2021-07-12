@@ -1,0 +1,16 @@
+#pie-chart {
+  width: 45rem !important;
+
+  @include media('<=1100px') {
+    width: 45rem !important;
+  }
+  @include media('<=900px') {
+    width: 42rem !important;
+  }
+  @include media('<=788px') {
+    width: 40rem !important;
+  }
+  @include media('<=720px') {
+    width: 30rem !important;
+  }
+}

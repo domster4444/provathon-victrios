@@ -1,0 +1,44 @@
+#heroSection {
+  width: 172.3rem;
+  height: 75rem;
+  @include media('<=788px') {
+    width: 100vw;
+  }
+  @include media('<=788px') {
+    height: 60vw;
+  }
+  display: flex;
+  align-items: center;
+  background-position-y: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/general/herosection-bg.jpg);
+  h1 {
+    font-size: 5.6rem;
+    @include media('<=788px') {
+      font-size: 2.6rem;
+    }
+    color: rgb(0, 35, 75);
+  }
+  h2 {
+    @include media('<=788px') {
+      font-size: 1.6rem;
+    }
+    color: rgb(0, 35, 75);
+  }
+  button {
+    box-shadow: 0px 10px 30px 0px rgba(44, 130, 237, 0.4) !important;
+
+    background: #0065ff;
+
+    margin-top: 2rem;
+
+    font-size: 2.17rem;
+    padding: 0.5rem 2rem;
+    @include media('<=788px') {
+      margin-top: 0.5rem;
+      padding: 0.2rem 0.4rem;
+      font-size: 1.6rem;
+    }
+  }
+}
