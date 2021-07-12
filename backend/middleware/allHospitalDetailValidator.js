@@ -5,6 +5,7 @@ const hospitalDetailTemplate = require('../model/HospitalDetail');
 
 function allHospitalValidator(req, res, next) {
   let errors = {};
+
   const hospitalCode = req.body.data.hospitalCode;
   const hospitalName = req.body.data.hospitalName;
   const hospitalAddress = req.body.data.hospitalAddress;
@@ -16,9 +17,11 @@ function allHospitalValidator(req, res, next) {
   const noOfTotalCovidPatient = req.body.data.noOfTotalCovidPatient;
   const hospitalPhNo = req.body.data.hospitalPhNo;
 
+  //general check
+  //?renaming before check
   let myhospitalcode = !isEmpty(hospitalCode) ? hospitalCode : '';
   let myhospitalname = !isEmpty(hospitalName) ? hospitalName : '';
-  let myhospitladdress = !isEmpty(hospitalAddress) ? hospitalAddress : '';
+  let myhospitaladdress = !isEmpty(hospitalAddress) ? hospitalAddress : '';
   let mynoofoxycyl = !isEmpty(noOfOxyCyl) ? noOfOxyCyl : '';
   let mynoofvacbed = !isEmpty(noOfVacBed) ? noOfVacBed : '';
 
@@ -34,7 +37,6 @@ function allHospitalValidator(req, res, next) {
   const mynoOftotalcovidpatient = !isEmpty(noOfTotalCovidPatient)
     ? noOfTotalCovidPatient
     : '';
-
   let myhospitalphno = !isEmpty(hospitalPhNo) ? hospitalPhNo : '';
 
   if (Validator.isEmpty(myhospitalcode)) {
@@ -43,15 +45,17 @@ function allHospitalValidator(req, res, next) {
   if (Validator.isEmpty(myhospitalname)) {
     errors.message = 'hospital name field is required';
   }
-  if (Validator.isEmpty(myhospitladdress)) {
+  if (Validator.isEmpty(myhospitaladdress)) {
     errors.message = 'hospital address field is required';
   }
   if (Validator.isEmpty(mynoofoxycyl)) {
-    errors.message = 'hospital oxygen field is required';
+    errors.message = 'hospital no of oxy cyl field is required';
   }
   if (Validator.isEmpty(mynoofvacbed)) {
-    errors.message = 'hospital bed field is required';
+    errors.message = 'hospital no of vac bed  field is required';
   }
+
+  // -
   if (Validator.isEmpty(mynoOfsinglevaccinatedpatient)) {
     errors.message = 'no of single vaccinated patient field is required';
   }
@@ -61,17 +65,19 @@ function allHospitalValidator(req, res, next) {
   if (Validator.isEmpty(mynoOftriplevaccinatedpatient)) {
     errors.message = 'no of triple vaccinated patient field is required';
   }
-
   if (Validator.isEmpty(mynoOftotalcovidpatient)) {
-    errors.message = 'no of triple vaccinated patient field is required';
+    errors.message = 'no of total covid patient field is required';
   }
   if (Validator.isEmpty(myhospitalphno)) {
-    errors.message = 'no of triple vaccinated patient field is required';
+    errors.message = 'hospital ph no field is required';
   }
+
   if (errors.message) {
     res.send(errors);
   } else {
     next();
   }
+
+  //if already submitted for first time
 }
 module.exports = allHospitalValidator;

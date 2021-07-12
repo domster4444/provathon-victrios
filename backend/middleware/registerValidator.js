@@ -3,16 +3,15 @@ const isEmpty = require('is-empty');
 function registerValidator(req, res, next) {
   let errors = {};
 
-  //? log present state of program flow
-  console.log('register validator triggered');
-
+  console.log(`register validator triggered`);
   const name = req.body.data.name;
   const email = req.body.data.email;
   const district = req.body.data.district;
   const password1 = req.body.data.password1;
   const password2 = req.body.data.password2;
   const licence = req.body.data.licence;
-  //   __REDECLARE FOR VALIDATION
+  //TODO:==================redeclaring variable for validation
+  //ysing isEmpty
   let mydistrict = !isEmpty(district) ? district : '';
   let myname = !isEmpty(name) ? name : '';
   let myemail = !isEmpty(email) ? email : '';
@@ -20,40 +19,41 @@ function registerValidator(req, res, next) {
   let mypassword1 = !isEmpty(password1) ? password1 : '';
   let mypassword2 = !isEmpty(password2) ? password2 : '';
 
-  //district validation
+  //name check
   if (Validator.isEmpty(mydistrict)) {
-    errors.message = 'district field is required';
+    errors.message = 'district  field is required';
   }
-  // name validator
+  //name check
   if (Validator.isEmpty(myname)) {
     errors.message = 'hospital name field is required';
   }
-  //email validation
+
+  // Email checks
   if (Validator.isEmpty(myemail)) {
     errors.message = 'Email field is required';
-  } else if (!Validator.isEmpty(myemail)) {
-    errors.message = ' email is invalid sorry';
+  } else if (!Validator.isEmail(myemail)) {
+    errors.message = 'Email is invalid';
   }
-  //   licence check
+
+  //licence check
   if (Validator.isEmpty(mylicence)) {
     errors.message = 'licence key field is required';
   }
 
-  // password validation
+  // Password checks
   if (Validator.isEmpty(mypassword1)) {
-    errors.message = 'licence key field is required';
+    errors.message = 'Password field is required';
   }
   if (Validator.isEmpty(mypassword2)) {
-    errors.message = 'confirm password field is required';
+    errors.message = 'Confirm password field is required';
   }
   if (!Validator.isLength(mypassword1, { min: 6, max: 30 })) {
-    errors.message = 'password must be at least 6 charaters';
+    errors.message = 'Password must be at least 6 characters';
   }
   if (!Validator.equals(mypassword1, mypassword2)) {
-    errors.message = 'password must match';
+    errors.message = 'Passwords must match';
   }
 
-  // _________LICENCE KEY TO LOGIN VALIDATION
   const licenceList = [
     '3986-2963-7657-6498',
     '3425-4772-9725-0095',
@@ -76,9 +76,9 @@ function registerValidator(req, res, next) {
     '0909-3561-4479-0647',
     '5169-7817-4813-2974',
   ];
-
   let isMatchLicence = licenceList.includes(licence.toString());
   if (isMatchLicence) {
+    //?if licence key matched then check if other error occured or not
     if (errors.message) {
       res.send(errors);
     } else {
@@ -90,6 +90,8 @@ function registerValidator(req, res, next) {
     });
   }
 
-  console.log('____reigister validation middleware passed___');
+  console.log(
+    '.................Register Validator Used....................... '
+  );
 }
 module.exports = registerValidator;
