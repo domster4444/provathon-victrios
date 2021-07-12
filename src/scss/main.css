@@ -1363,12 +1363,12 @@ h6 {
 }
 
 .containerCenter {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .contentBlock {
-  justify-content: center;
+  justify-content: center !important;
   display: flex;
   width: 65% !important;
 }
@@ -2163,6 +2163,41 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   font-size: 1.8rem;
   padding: 0.5rem 2rem;
+}
+
+.update-resource {
+  margin-top: 10rem;
+}
+
+.update-resource label {
+  font-weight: bolder;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.update-resource button {
+  font-size: 2.5rem !important;
+  width: 100%;
+}
+
+.update-resource input {
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 6.2rem;
+  font-size: 1.9rem;
+}
+
+.update-resource input :placeholder-shown {
+  font-size: 1.9rem;
+}
+
+.update-resource .containerCenter .contentBlock form {
+  box-shadow: 0px 0px 6px 6px whitesmoke;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
+  font-size: 1.7rem;
+  width: 70%;
+  background-color: white;
 }
 
 /* Google Font CDN Link */

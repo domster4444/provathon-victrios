@@ -4,13 +4,13 @@
 }
 
 .containerCenter {
-  display: flex;
+  display: flex !important;
 
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .contentBlock {
-  justify-content: center;
+  justify-content: center !important;
   @include media('<=1351px') {
     width: 90% !important;
   }

@@ -26,11 +26,8 @@
 @import '3-basics/typography';
 
 //?4-LAYOUT   SHARED BIG COMPONENTS
-@import '4-layout/body-template';
 @import '4-layout/header';
 @import '4-layout/footer';
-@import '4-layout/sidebar';
-@import '4-layout/toolbar';
 
 //? 5-MODULES
 @import '5-modules/header';
@@ -46,6 +43,7 @@
 @import '6-pages/dashboardBody';
 @import '6-pages/dashboardHomeBody';
 @import '6-pages/recoveredPatientBody';
+@import '6-pages/updateResourcePage';
 
 @import '5-modules/dashboardNav';
 @import '5-modules/dashboardToolbar';
