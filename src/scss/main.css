@@ -1203,7 +1203,31 @@ template {
 }
 
 :root {
-  font-size: 10px;
+  font-size: 9px;
+}
+
+@media (max-width: 1466px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 967px) {
+  :root {
+    font-size: 6.5px;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    font-size: 5.8px;
+  }
+}
+
+@media (max-width: 788px) {
+  :root {
+    font-size: 10px;
+  }
 }
 
 .cursor {
@@ -1221,7 +1245,6 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: white;
 }
 
@@ -1252,6 +1275,16 @@ html {
 
 button {
   outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 /*Button Two*/
@@ -1719,37 +1752,142 @@ a:visited {
   margin-bottom: 1.5rem;
 }
 
-#Navigation {
-  position: relative;
-}
-
-#Navigation #logo {
-  position: absolute;
-  top: 4.6rem;
-  left: 5rem;
-  font-size: 1.8rem;
-}
-
-#Navigation #logo span {
-  color: #a3a3a3;
-}
-
-#Navigation #navigation_section {
-  height: 11rem;
-  background-color: transparent;
+#navBar {
+  padding: 0.5rem 0rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#Navigation #navigation_section #navigation_section_header #navBar ul {
-  margin-right: 16rem;
-  width: 100%;
+#navBar nav {
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65%;
+}
+
+@media (max-width: 1351px) {
+  #navBar nav {
+    width: 100%;
+  }
+}
+
+#navBar nav #logoBlock {
+  height: 100%;
+}
+
+#navBar nav #logoBlock img {
+  height: 100%;
+  width: 70px;
+}
+
+#navBar nav #menuBlock ul {
+  justify-content: center;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-#Navigation #navigation_section #navigation_section_header #navBar ul li {
-  margin: 0.2rem 3.8rem;
+@media (max-width: 788px) {
+  #navBar nav #menuBlock ul {
+    display: none;
+  }
+}
+
+#navBar nav #menuBlock ul li {
+  padding: 2rem 0rem;
+  color: black;
   font-size: 2rem;
+  margin: 0rem 1.2rem;
+}
+
+#navBar nav #menuBlock ul #blueGhostBtn {
+  box-shadow: 0px 30px 30px 0px rgba(0, 11, 40, 0.1);
+  border-radius: 4rem;
+  padding: 1rem 4rem;
+  border: 1px solid #0065ff;
+  color: #0065ff;
+  transition: all 300ms ease-in-out;
+}
+
+#navBar nav #menuBlock ul #blueGhostBtn:active {
+  transition: all 10ms ease-in-out;
+  transform: scale(1.04);
+}
+
+#dropdown-basic {
+  font-size: 2rem !important;
+}
+
+#hospital-service-page_heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+#hospitalServicePage {
+  width: 100%;
+}
+
+#hospitalServicePage table {
+  font-size: 1.4rem;
+}
+
+#hospitalServicePage table img {
+  margin-right: 1rem;
+  height: 2rem;
+}
+
+#hospitalServicePage .contentBlock {
+  display: flex;
+  width: 100% !important;
+}
+
+#hospitalServicePage .gblPieChartContainer {
+  width: 45rem;
+}
+
+@media (max-width: 670px) {
+  #hospitalServicePage .gblPieChartContainer {
+    width: 30rem;
+  }
+}
+
+#hospital_detail_accordion {
+  font-size: 1.9rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 100%;
+  border-right: 5px solid #007bff;
+}
+
+#hospital_detail_accordion img {
+  height: 3.5rem;
+}
+
+#hospital_detail_accordion #plasmaList {
+  border-right: 0.2rem solid #007bff;
+}
+
+#hospital_detail_accordion h1 {
+  font-size: 2.4rem;
+}
+
+.card-header {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+.card-header:hover {
+  background-color: lightgray;
 }

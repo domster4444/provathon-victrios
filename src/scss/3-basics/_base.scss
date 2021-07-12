@@ -4,7 +4,19 @@
   padding: 0px;
 }
 :root {
-  font-size: 10px;
+  font-size: 9px;
+  @include media('<=1466px') {
+    font-size: 8px;
+  }
+  @include media('<=967px') {
+    font-size: 6.5px;
+  }
+  @include media('<=860px') {
+    font-size: 5.8px;
+  }
+  @include media('<=788px') {
+    font-size: 10px;
+  }
 }
 .cursor {
   cursor: pointer;
@@ -19,7 +31,6 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: white;
 }
 
@@ -52,4 +63,14 @@ body {
 
 button {
   outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }

@@ -86,7 +86,7 @@ export default function Header(props) {
                   <Link to="/login">Login</Link>
                 </li>
                 <li className="cursor poppins_regular_400">
-                  <Link to="/signup"></Link>
+                  <Link to="/signup">Register</Link>
                 </li>
               </ul>
             </div>

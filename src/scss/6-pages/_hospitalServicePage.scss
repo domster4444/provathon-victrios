@@ -1,0 +1,61 @@
+#hospital-service-page_heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 5rem;
+}
+#hospitalServicePage {
+  width: 100%;
+  table {
+    img {
+      margin-right: 1rem;
+      height: 2rem;
+    }
+    font-size: 1.4rem;
+  }
+  // .stats-lable {
+  //   font-size: 1.4rem;
+  // }
+  .containerCenter {
+  }
+  .contentBlock {
+    display: flex;
+    width: 100% !important;
+  }
+  .gblPieChartContainer {
+    width: 45rem;
+    @include media('<=670px') {
+      width: 30rem;
+    }
+  }
+}
+// _______DASHBOARD HOSPITAL SERVICE MENU
+#hospital_detail_accordion {
+  img {
+    height: 3.5rem;
+  }
+  #plasmaList {
+    border-right: 0.2rem solid rgb(0, 123, 255);
+  }
+  font-size: 1.9rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 100%;
+  border-right: 5px solid rgb(0, 123, 255);
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+.card-header {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+// ___Accoridion hover state :
+.card-header {
+  &:hover {
+    background-color: lightgray;
+  }
+}
