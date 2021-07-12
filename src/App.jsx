@@ -83,6 +83,10 @@ function App() {
           path="/covidstatus"
           component={() => <CovidStatusPage isLoggedInProps={isLoggedIn} />}
         />
+        {/* <Route
+          path="/districtstatspage"
+          component={() => <DistrictStatsPage isLoggedInProps={isLoggedIn} />}
+        /> */}
 
         {/* ________________________PRIVATE ROUTES  */}
         <PrivateRoute
