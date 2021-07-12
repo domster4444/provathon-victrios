@@ -2125,6 +2125,34 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.Toastify__toast--success {
+  font-size: 1.7rem !important;
+}
+
+.Toastify__toast--warning {
+  background: #ffe8bc !important;
+  font-size: 1.7rem !important;
+}
+
+.Toastify__toast--error {
+  background: #e01e26 !important;
+  font-size: 1.7rem !important;
+}
+
+.Toastify__toast--default {
+  font-size: 1.7rem !important;
+}
+
+.toastBody {
+  font-family: 'Atlas Grotesk Web', Arial, Helvetica, sans-serif;
+  color: #10171d;
+  /* #10171D */
+}
+
+.toastProgress {
+  background: #333f48 !important;
+}
+
 #hospital-service-page_heading {
   margin-top: 5rem;
   margin-bottom: 5rem;
