@@ -54,7 +54,7 @@ export default function Header(props) {
             <div id="menuBlock">
               <ul>
                 <li className="cursor poppins_regular_400">
-                  <a href="/">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
 
                 <Dropdown
