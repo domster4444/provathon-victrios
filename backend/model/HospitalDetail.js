@@ -4,10 +4,12 @@ const hospitalDetailTemplate = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   hospitalName: {
     type: String,
     required: true,
   },
+
   hospitalAddress: {
     type: String,
     required: true,
@@ -16,11 +18,11 @@ const hospitalDetailTemplate = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   noOfVacBed: {
     type: String,
     required: true,
   },
-
   noOfSingleVaccinatedPatient: {
     type: String,
     required: true,
@@ -41,10 +43,10 @@ const hospitalDetailTemplate = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   date: {
     type: Date,
     default: Date.now,
   },
 });
-
 module.exports = mongoose.model('allhospitaldetails', hospitalDetailTemplate);

@@ -247,7 +247,7 @@ const DashboardPage = (props) => {
                     placeholder="Enter no of double vaccinated patient admitted"
                   />
                   <Form.Label className="poppins_medium_500 label-title">
-                    No of triple vaccinated people
+                    No of Zero vaccinated people
                   </Form.Label>
                   <Form.Control
                     className="model-input-field"

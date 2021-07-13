@@ -237,9 +237,11 @@ const DashboardBody = () => {
     let myDistrict = myInput.value;
 
     // ______POST "district" key to server to get message:[{},{}]
+
+    //*end point->
     //??? http://localhost:5000/api/hospitalresourcedetail/district
     axios
-      .post('https://google.com', {
+      .post('http://localhost:5000/api/hospitalresourcedetail/district', {
         data: {
           district: myDistrict,
         },
@@ -384,6 +386,18 @@ const DashboardBody = () => {
                                                   {
                                                     allHospitalResourceData[i]
                                                       .noOfDoubleVaccinatedPatient
+                                                  }
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td className="poppins_semibold_600">
+                                                  No of Zero Vaccined Patient
+                                                  Admitted
+                                                </td>
+                                                <td>
+                                                  {
+                                                    allHospitalResourceData[i]
+                                                      .noOfTripleVaccinatedPatient
                                                   }
                                                 </td>
                                               </tr>

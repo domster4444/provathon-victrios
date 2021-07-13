@@ -49,6 +49,9 @@ export default function Header(props) {
             <a href="/">
               <div id="logoBlock">
                 <img src={logo} alt="representation of logo" />
+                <span id="site-title" className="poppins_bold_700">
+                  COVID STATS NEPAL
+                </span>
               </div>
             </a>
             <div id="menuBlock">

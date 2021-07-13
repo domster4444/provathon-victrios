@@ -69,31 +69,7 @@
 //         transform: translateY(0px);
 //     }
 // }
-
-// #heroSectionPhoneImage,#girlInPhoneImage,#designIllustrator,#planningPhone{
-
-//     animation-name: animationOne;
-//     animation-duration: 3.8s;
-//     animation-iteration-count: infinite;
-//    transition:all  3.8s  ;
-// }
-
-// @keyframes animationOne{
-//     from{
-//         transform: translateX(0px);
-
-//     }
-//     to{
-// transform: translateX(200px);
-//     }
-// }
-
-// .cls{
-//     animation-name: animationOne;
-//    animation-duration: 3.8s;
-//     animation-iteration-count: infinite;
-//    transition:all  3.8s  ;
-// }
+//?global floating animation class
 
 @keyframes float {
   0% {

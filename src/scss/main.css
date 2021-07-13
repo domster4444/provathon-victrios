@@ -2787,6 +2787,12 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 
+#site-title {
+  margin-left: 2rem;
+  font-size: 3rem;
+  top: 2rem;
+}
+
 /* Google Font CDN Link */
 body {
   background-color: #f8f8fb;
