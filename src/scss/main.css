@@ -2471,6 +2471,16 @@ body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(40deg, #57b22a 0%, #77ea3d 100%);
 }
 
+#plasmaList-listContainer {
+  width: 100%;
+  font-size: 1.8rem;
+  margin: 1rem 0rem;
+}
+
+#plasmaList {
+  border-right: 2px solid blue;
+}
+
 #hospital-service-page_heading {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -2669,6 +2679,26 @@ body::-webkit-scrollbar-thumb {
   margin-left: 0.5rem;
   font-size: 1.7rem;
   padding: 0.5rem 1.5rem;
+}
+
+#dashboardBody #findPlasmaPatientBtn {
+  height: 4rem;
+  margin-left: 0.5rem;
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+#dashboardBody #findPlasmaPatientBtn {
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+@media (max-width: 788px) {
+  #dashboardBody #findPlasmaPatientBtn {
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
 }
 
 .plasmaFieldSearchInput {

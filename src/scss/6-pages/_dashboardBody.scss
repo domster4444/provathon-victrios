@@ -7,3 +7,23 @@
     padding: 0.5rem 1.5rem;
   }
 }
+// ??_____BUTTON FIX
+
+#dashboardBody #findPlasmaPatientBtn {
+  height: 4rem;
+  margin-left: 0.5rem;
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+#dashboardBody #findPlasmaPatientBtn {
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+#dashboardBody #findPlasmaPatientBtn {
+  @include media('<=788px') {
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
+}

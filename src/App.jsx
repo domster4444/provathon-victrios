@@ -45,7 +45,6 @@ function App() {
       <Router>
         {/* //?______________only render header if isLoggedIn is false */}
         <Header isLoggedInProps={isLoggedIn}></Header>
-
         <Route
           exact
           path="/"
@@ -74,19 +73,19 @@ function App() {
         />
         <Route path="/forgotpassword" component={ForgotPasswordPage} />
         <Route path="/404" component={PageNotFound} />
-
         <Route
           path="/hospitalservice"
           component={() => <HospitalService isLoggedInProps={isLoggedIn} />}
         />
-        <Route
-          path="/covidstatus"
-          component={() => <CovidStatusPage isLoggedInProps={isLoggedIn} />}
-        />
+        {/* //? merging district stats component within covid status page */}
         {/* <Route
           path="/districtstatspage"
           component={() => <DistrictStatsPage isLoggedInProps={isLoggedIn} />}
         /> */}
+        <Route
+          path="/covidstatus"
+          component={() => <CovidStatusPage isLoggedInProps={isLoggedIn} />}
+        />
 
         {/* ________________________PRIVATE ROUTES  */}
         <PrivateRoute

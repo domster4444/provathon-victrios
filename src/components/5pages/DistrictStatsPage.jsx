@@ -335,7 +335,11 @@ const DistrictStatsPage = () => {
             >
               Find
             </button>
+          </div>
+        </div>
 
+        <div className="containerCenter">
+          <div className="contentBlock">
             {(() => {
               let noOfFemaleCase = 0;
               let noOfMaleCase = 0;
@@ -363,7 +367,11 @@ const DistrictStatsPage = () => {
                             <p></p>
                           </div>
                           <br />
-                          <ListGroup id="plasmaList-listContainer" key="1">
+                          <ListGroup
+                            id="plasmaList-listContainer"
+                            key="1"
+                            style={{ width: '100%' }}
+                          >
                             <ListGroup.Item id="plasmaList">
                               <Table hover>
                                 <thead></thead>
