@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const patientRecovered = new mongoose.Schema({
+const patientRecoveredTemplate = new mongoose.Schema({
   patientId: {
     type: String,
     required: true,
@@ -16,15 +16,15 @@ const patientRecovered = new mongoose.Schema({
     type: String,
     required: true,
   },
-  hospitalPhNo: {
+  hotpitalPhNo: {
     type: String,
     required: true,
   },
-
   hospitalDistrict: {
     type: String,
     required: true,
   },
+
   hospitalEmail: {
     type: String,
     required: true,
@@ -39,5 +39,4 @@ const patientRecovered = new mongoose.Schema({
     default: Date.now,
   },
 });
-
-module.exports = mongoose.model('patientRecovered', patientRecovered);
+module.exports = mongoose.model('patientRecovered', patientRecoveredTemplate);
