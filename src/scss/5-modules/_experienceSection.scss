@@ -1,0 +1,40 @@
+#ExperienceSection {
+  padding: 13rem;
+  @include media('<=788px') {
+    padding: 1rem;
+  }
+  .contentBlock {
+    flex-direction: row;
+  }
+
+  .leftDivision {
+    @include media('<=788px') {
+      width: 100%;
+    }
+    width: 50%;
+  }
+
+  .rightDivision {
+    @include media('<=788px') {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    width: 50%;
+  }
+  h2 {
+    margin-top: 4rem;
+    font-size: 3.6rem;
+  }
+
+  p {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+  }
+
+  a {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+  }
+}

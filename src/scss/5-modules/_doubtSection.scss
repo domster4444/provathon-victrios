@@ -1,0 +1,131 @@
+#doubtSectionMain {
+  position: relative;
+  padding-top: 12rem;
+  @include flexContainer;
+  justify-content: center;
+  padding-bottom: 3rem;
+  svg {
+    fill: url(#MyGradient);
+  }
+}
+
+#doubtSection_blob {
+  top: 10rem;
+  z-index: -1;
+  left: -10rem;
+  position: absolute;
+}
+
+#doubtSection {
+  @include flexContainer;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media('<=788px') {
+    justify-content: center;
+  }
+
+  #leftSection {
+    position: relative;
+    z-index: 1;
+    h4 {
+      margin: 1rem;
+      font-size: 4rem;
+      @include media('<=400px') {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  #rightSection {
+    position: relative;
+    z-index: 1;
+    .upperBlock {
+      @include flexContainer;
+      flex-wrap: wrap;
+      @include media('>=1100px') {
+        #card1 {
+          margin-top: -3rem;
+        }
+        #card2 {
+          margin-top: 3rem;
+        }
+        #card3 {
+          margin-top: -3rem;
+        }
+        #card4 {
+          margin-top: 3rem;
+        }
+      }
+      #card1 {
+        h4 {
+          color: rgb(0, 35, 75);
+        }
+        border-left: 4px solid rgb(0, 35, 75);
+      }
+      #card2 {
+        h4 {
+          color: rgb(0, 35, 75);
+        }
+
+        border-left: 4px solid rgb(0, 35, 75);
+      }
+      #card3 {
+        h4 {
+          color: rgb(0, 35, 75);
+        }
+        border-left: 4px solid rgb(0, 35, 75);
+      }
+      #card4 {
+        h4 {
+          color: rgb(0, 35, 75);
+        }
+        border-left: 4px solid rgb(0, 35, 75);
+      }
+      #card1,
+      #card2,
+      #card3,
+      #card4 {
+        h4 {
+          margin-top: 1rem;
+          font-size: 1.7rem;
+        }
+        p {
+          margin-top: 0.6rem;
+          font-size: 1.5rem;
+        }
+      }
+      .doutCards {
+        animation-name: float;
+        animation-duration: 3.8s;
+        animation-iteration-count: infinite;
+        transition: all 3.8s;
+        img {
+          height: 4rem;
+        }
+
+        box-shadow: 0 6px 16px rgba(52, 105, 203, 0.16);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem;
+        color: black;
+        background-color: white;
+        height: 18.7rem;
+        width: 20.7rem;
+      }
+    }
+  }
+}
+
+// --BLOB
+
+/* The blob: Basic positioning and a transition with the same duration as the JS interval */
+#blob {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  left: 18rem;
+  transform-origin: 50% 50%;
+  transition: all 6s linear;
+}
+
+// --BLOB

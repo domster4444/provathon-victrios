@@ -6,6 +6,10 @@ import Notice from '../1atoms/Notice.jsx';
 
 import HeroSection from '../4templates/HeroSection';
 import AdditionalServiceSection from '../4templates/AdditionalServiceSection';
+import DoubtSection from '../4templates/DoubtSection';
+import ExperienceSection from '../4templates/ExperienceSection';
+import ArrowGhostCardSection from '../4templates/ArrowGhostCardSection';
+
 export default function Homepage(props) {
   if (props.isLoggedInProps === false) {
     return (
@@ -13,6 +17,9 @@ export default function Homepage(props) {
         <Notice />
         <HeroSection></HeroSection>
         <AdditionalServiceSection></AdditionalServiceSection>
+        <DoubtSection />
+        <ArrowGhostCardSection />
+        <ExperienceSection />
       </div>
     );
   } else {
