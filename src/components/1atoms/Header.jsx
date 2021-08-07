@@ -77,6 +77,9 @@ export default function Header(props) {
                       <Link to="/hospitalservice">Hospital Services</Link>
                     </Dropdown.Item>
                     <Dropdown.Item>
+                      <Link to="/vaccineservice">Vaccine Service</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
                       <Link to="/covidstatus">Covid Status</Link>
                     </Dropdown.Item>
                     {/* <Dropdown.Item>

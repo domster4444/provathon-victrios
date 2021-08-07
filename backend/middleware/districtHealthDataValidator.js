@@ -12,13 +12,13 @@ function districtHealthDataValidator(req, res, next) {
 
   let errors = {};
 
-  const dhodistrict = req.body.dhodistrict;
-  const todaySingleVacUsed = req.body.todaySingleVacUsed;
-  const todayDoubleVacUsed = req.body.todayDoubleVacUsed;
-  const totalSingleVacUsed = req.body.totalSingleVacUsed;
-  const totalDoubleVacUsed = req.body.totalDoubleVacUsed;
-  const todayTotalVacUsed = req.body.todayTotalVacUsed;
-  const totaVacUsedTillToday = req.body.totaVacUsedTillToday;
+  const dhodistrict = req.body.data.dhodistrict;
+  const todaySingleVacUsed = req.body.data.todaySingleVacUsed;
+  const todayDoubleVacUsed = req.body.data.todayDoubleVacUsed;
+  const totalSingleVacUsed = req.body.data.totalSingleVacUsed;
+  const totalDoubleVacUsed = req.body.data.totalDoubleVacUsed;
+  const todayTotalVacUsed = req.body.data.todayTotalVacUsed;
+  const totaVacUsedTillToday = req.body.data.totaVacUsedTillToday;
 
   //todo:---------------redeclaring variable for checking
 

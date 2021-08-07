@@ -12,6 +12,7 @@ import SignUpPage from './components/5pages/RegisterPageI';
 import LoginPage from './components/5pages/LoginPageI';
 import ForgotPasswordPage from './components/5pages/ForgotPasswordPage';
 import PageNotFound from './components/5pages/PageNotFound';
+import DhoService from './components/5pages/DhoService';
 import { useState } from 'react';
 import { css } from 'styled-components';
 import PrivateRoute from './PrivateRoute';
@@ -78,6 +79,10 @@ function App() {
         <Route
           path="/hospitalservice"
           component={() => <HospitalService isLoggedInProps={isLoggedIn} />}
+        />
+        <Route
+          path="/vaccineservice"
+          component={() => <DhoService isLoggedInProps={isLoggedIn} />}
         />
         <Route path="/ourteam" component={() => <OurTeam />} />
         {/* //? merging district stats component within covid status page */}

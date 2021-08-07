@@ -16,7 +16,7 @@ const districtHealthDataValidator = require('../middleware/districtHealthDataVal
 router.post('/dhoDataSave', (req, res) => {
   //?general validation passsed
   dhoDataTemplate
-    .findOne({ dhodistrict: req.body.dhodistrict })
+    .findOne({ dhodistrict: req.body.data.dhodistrict })
     .then((exist) => {
       if (exist) {
         console.log(`------------------DATA FOUND ALREAY EIST${exist}`);
@@ -24,14 +24,14 @@ router.post('/dhoDataSave', (req, res) => {
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         dhoDataTemplate.findOneAndUpdate(
-          { dhodistrict: req.body.dhodistrict },
+          { dhodistrict: req.body.data.dhodistrict },
           {
-            todaySingleVacUsed: req.body.todaySingleVacUsed,
-            todayDoubleVacUsed: req.body.todayDoubleVacUsed,
-            totalSingleVacUsed: req.body.totalSingleVacUsed,
-            totalDoubleVacUsed: req.body.totalDoubleVacUsed,
-            todayTotalVacUsed: req.body.todayTotalVacUsed,
-            totaVacUsedTillToday: req.body.totalVacUsedTillToday,
+            todaySingleVacUsed: req.body.data.todaySingleVacUsed,
+            todayDoubleVacUsed: req.body.data.todayDoubleVacUsed,
+            totalSingleVacUsed: req.body.data.totalSingleVacUsed,
+            totalDoubleVacUsed: req.body.data.totalDoubleVacUsed,
+            todayTotalVacUsed: req.body.data.todayTotalVacUsed,
+            totaVacUsedTillToday: req.body.data.totalVacUsedTillToday,
           },
           (err, data) => {
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -58,13 +58,13 @@ router.post('/dhoDataSave', (req, res) => {
         // ))))))))))))))))))))))))))))))))))))))SAVE ()
 
         const dhoDataToSave = new dhoDataTemplate({
-          dhodistrict: req.body.dhodistrict,
-          todaySingleVacUsed: req.body.todaySingleVacUsed,
-          todayDoubleVacUsed: req.body.todayDoubleVacUsed,
-          totalSingleVacUsed: req.body.totalSingleVacUsed,
-          totalDoubleVacUsed: req.body.totalDoubleVacUsed,
-          todayTotalVacUsed: req.body.todayTotalVacUsed,
-          totalVacUsedTillToday: req.body.totalVacUsedTillToday,
+          dhodistrict: req.body.data.dhodistrict,
+          todaySingleVacUsed: req.body.data.todaySingleVacUsed,
+          todayDoubleVacUsed: req.body.data.todayDoubleVacUsed,
+          totalSingleVacUsed: req.body.data.totalSingleVacUsed,
+          totalDoubleVacUsed: req.body.data.totalDoubleVacUsed,
+          todayTotalVacUsed: req.body.data.todayTotalVacUsed,
+          totalVacUsedTillToday: req.body.data.totalVacUsedTillToday,
         });
 
         dhoDataToSave
@@ -89,7 +89,7 @@ router.post('/dhoDataSave', (req, res) => {
 // !===========================HOSPITAL RESOURCE FILTER BY DISTRICT
 router.post('/dhoDataGet', (req, res) => {
   dhoDataTemplate
-    .find({ dhodistrict: req.body.dhodistrict })
+    .find({ dhodistrict: req.body.data.dhodistrict })
     .then((data) => {
       if (data[0]) {
         res.status(200).json({
