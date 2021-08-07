@@ -37,8 +37,8 @@ app.use('/api', isDetailAlreadySetup);
 app.use('/api', require('./router/patientRecovered'));
 ///? localhost:5000/api/fetchhospitalno
 app.use('/api', require('./router/fetchHospitalNoFromAlreadySetup'));
-app.use('/api', require('./router/fetchHospitalNoFromAlreadySetup'));
 app.use('/api', require('./router/patientRecoveredByDistrict'));
+app.use('/api', require('./router/updateResource'));
 app.listen(process.env.PORT || 5000, (req, res) => {
   console.log(
     '*************************** SERVER STARTED AT ********************'
