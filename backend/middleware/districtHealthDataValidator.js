@@ -1,3 +1,10 @@
+// todaySingleVacUsed: todaySingleVacUsed,
+// todayDoubleVacUsed: todayDoubleVacUsed,
+// totalSingleVacUsed: totalSingleVacUsed,
+// totalDoubleVacUsed: totalDoubleVacUsed,
+// todayTotalVacUsed: todayTotalVacUsed,
+// totaVacUsedTillToday: totalVacUsedTillToday,
+
 const Validator = require('validator');
 const isEmpty = require('is-empty');
 function districtHealthDataValidator(req, res, next) {
@@ -5,12 +12,13 @@ function districtHealthDataValidator(req, res, next) {
 
   let errors = {};
 
-  const todaySingleVacUsed = req.body.data.todaySingleVacUsed;
-  const todayDoubleVacUsed = req.body.data.todayDoubleVacUsed;
-  const totalSingleVacUsed = req.body.data.totalSingleVacUsed;
-  const totalDoubleVacUsed = req.body.data.totalDoubleVacUsed;
-  const todayTotalVacUsed = req.body.data.todayTotalVacUsed;
-  const totaVacUsedTillToday = req.body.data.totaVacUsedTillToday;
+  const dhodistrict = req.body.dhodistrict;
+  const todaySingleVacUsed = req.body.todaySingleVacUsed;
+  const todayDoubleVacUsed = req.body.todayDoubleVacUsed;
+  const totalSingleVacUsed = req.body.totalSingleVacUsed;
+  const totalDoubleVacUsed = req.body.totalDoubleVacUsed;
+  const todayTotalVacUsed = req.body.todayTotalVacUsed;
+  const totaVacUsedTillToday = req.body.totaVacUsedTillToday;
 
   //todo:---------------redeclaring variable for checking
 
@@ -26,19 +34,35 @@ function districtHealthDataValidator(req, res, next) {
   const mytotaldoublevacUsed = !isEmpty(totalDoubleVacUsed)
     ? totalDoubleVacUsed
     : '';
+  const mytodaytotalvacused = !isEmpty(todayTotalVacUsed)
+    ? todayTotalVacUsed
+    : '';
+  const mytotavacusedtilltoday = !isEmpty(totaVacUsedTillToday)
+    ? totaVacUsedTillToday
+    : '';
+  const mydhodistrict = !isEmpty(dhodistrict) ? dhodistrict : '';
 
   if (Validator.isEmpty(mytodaysinglevacused)) {
-    errors.message = 'patient ID field is required';
+    errors.message = 'today single vac used field is required ';
   }
   if (Validator.isEmpty(mytodaydoublevacUsed)) {
-    errors.message = 'Patient Name field is required';
+    errors.message = 'today double vac used';
   }
 
   if (Validator.isEmpty(mytotalsinglevacUsed)) {
-    errors.message = 'Patient Doge field is required';
+    errors.message = 'total single vac used field is required';
   }
   if (Validator.isEmpty(mytotaldoublevacUsed)) {
-    errors.message = 'Patient address field is required';
+    errors.message = 'total double vac used field is required';
+  }
+  if (Validator.isEmpty(mytodaytotalvacused)) {
+    errors.message = 'today total vac used field is required';
+  }
+  if (Validator.isEmpty(mytotavacusedtilltoday)) {
+    errors.message = 'total vac used till today field is required';
+  }
+  if (Validator.isEmpty(mydhodistrict)) {
+    errors.message = 'dho district field is required';
   }
 
   if (errors.message) {

@@ -1,6 +1,13 @@
+//  todaySingleVacUsed: todaySingleVacUsed,
+//  todayDoubleVacUsed: todayDoubleVacUsed,
+//  totalSingleVacUsed: totalSingleVacUsed,
+//  totalDoubleVacUsed: totalDoubleVacUsed,
+//  todayTotalVacUsed: todayTotalVacUsed,
+//  totaVacUsedTillToday: totalVacUsedTillToday,
+
 const mongoose = require('mongoose');
 const dhoDataTemplate = new mongoose.Schema({
-  district: {
+  dhodistrict: {
     type: String,
   },
   todaySingleVacUsed: {
@@ -23,7 +30,7 @@ const dhoDataTemplate = new mongoose.Schema({
     type: String,
     required: true,
   },
-  totaVacUsedTillToday: {
+  totalVacUsedTillToday: {
     type: String,
     required: true,
   },

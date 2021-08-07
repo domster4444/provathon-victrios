@@ -39,6 +39,7 @@ app.use('/api', require('./router/patientRecovered'));
 app.use('/api', require('./router/fetchHospitalNoFromAlreadySetup'));
 app.use('/api', require('./router/patientRecoveredByDistrict'));
 app.use('/api', require('./router/updateResource'));
+app.use('/api', require('./router/districtHealthData'));
 app.listen(process.env.PORT || 5000, (req, res) => {
   console.log(
     '*************************** SERVER STARTED AT ********************'
