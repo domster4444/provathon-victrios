@@ -2837,11 +2837,12 @@ pre:empty::after {
 }
 
 #hospital_detail_accordion {
+  margin-bottom: 10rem;
   font-size: 1.9rem;
   border-radius: 2rem;
   cursor: pointer;
   width: 100%;
-  border-right: 5px solid #007bff;
+  border-right: 5px solid #7a8ad6;
 }
 
 #hospital_detail_accordion img {
@@ -2849,7 +2850,7 @@ pre:empty::after {
 }
 
 #hospital_detail_accordion #plasmaList {
-  border-right: 0.2rem solid #007bff;
+  border-right: 0.2rem solid #7a8ad6;
 }
 
 #hospital_detail_accordion h1 {
@@ -3353,6 +3354,7 @@ pre:empty::after {
 }
 
 #dho-portal .outerForm input {
+  font-size: 1.8rem;
   height: 4rem;
 }
 

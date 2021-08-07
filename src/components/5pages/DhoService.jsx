@@ -300,7 +300,16 @@ const DhoService = () => {
               />
             </form>
 
-            <button id="findPlasmaPatientBtn" onClick={plasmaFormHandler}>
+            <button
+              id="findPlasmacitizenBtn"
+              style={{
+                outline: 'none',
+                border: 'none',
+                background: 'transparent',
+                marginLeft: '2rem',
+              }}
+              onClick={plasmaFormHandler}
+            >
               <i id="hospitalService-searchIco" class="fas fa-search"></i>
             </button>
             <div className="contentBlock">
@@ -324,116 +333,116 @@ const DhoService = () => {
                           ) {
                             newArr.push(
                               <>
-                                <Card>
-                                  <Accordion.Toggle
-                                    as={Card.Header}
-                                    eventKey={i + 1}
-                                    key={i + 1}
-                                  >
-                                    <h1 className="poppins_regular_400">
-                                      <img src={hospitalIco} alt="" />
-                                      {/* //!district */}
-                                      {allHospitalResourceData[i].dhodistrict}
-                                    </h1>
-                                    <h1 className="poppins_regular_400">
-                                      <img src={hospitalPhone} alt="" />
-                                      Ph No.
-                                      {/* //!today single */}
-                                      {
-                                        allHospitalResourceData[i]
-                                          .todaySingleVacUsed
-                                      }
-                                    </h1>
-                                  </Accordion.Toggle>
-                                  <Accordion.Collapse eventKey={i + 1}>
-                                    <Card.Body>
-                                      <ListGroup id="plasmaList-listContainer">
-                                        <ListGroup.Item id="plasmaList">
-                                          <Table hover>
-                                            <thead></thead>
-                                            <tbody>
-                                              <tr>
-                                                <td className="poppins_semibold_600">
-                                                  Hospital Address
-                                                </td>
-                                                <td>
-                                                  {/* //!today double */}
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .todayDoubleVacUsed
-                                                  }
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td className="poppins_semibold_600">
-                                                  No of Oxygen Cylinder
-                                                  Available
-                                                </td>
-                                                <td>
-                                                  {/* //!total single  */}
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .totalSingleVacUsed
-                                                  }
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td className="poppins_semibold_600">
-                                                  No Of Bed Available Admitted
-                                                </td>
-                                                <td>
-                                                  {/* //!total double */}
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .totalDoubleVacUsed
-                                                  }
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td className="poppins_semibold_600">
-                                                  No Of Single Vaccined Patient
-                                                  Admitted
-                                                </td>
-                                                <td>
-                                                  {/* //!todayTotalVacUsed */}
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .todayTotalVacUsed
-                                                  }
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td className="poppins_semibold_600">
-                                                  No of Double Vaccined Patient
-                                                  Admitted
-                                                </td>
-                                                <td>
-                                                  {/* //!totalVacUsedTillToday */}
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .totalVacUsedTillToday
-                                                  }
-                                                </td>
-                                              </tr>
+                                <ListGroup id="plasmaList-listContainer">
+                                  <ListGroup.Item id="plasmaList">
+                                    <Table hover>
+                                      <thead></thead>
+                                      <tbody>
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Vaccined used for single vaccinated
+                                            citizen for today
+                                          </td>
+                                          <td>
+                                            {/* //!today single */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .todaySingleVacUsed
+                                            }
+                                          </td>
+                                        </tr>
 
-                                              <tr>
-                                                <td className="poppins_semibold_600">
-                                                  Date of last report
-                                                </td>
-                                                <td>
-                                                  {
-                                                    allHospitalResourceData[i]
-                                                      .date
-                                                  }
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </Table>
-                                        </ListGroup.Item>
-                                      </ListGroup>
-                                    </Card.Body>
-                                  </Accordion.Collapse>
-                                </Card>
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Vaccined used for double vaccinated
+                                            citizen for today
+                                          </td>
+                                          <td>
+                                            {/* //!today double */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .todayDoubleVacUsed
+                                            }
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Total Vaccine Used Today
+                                          </td>
+                                          <td>
+                                            {/* //!todayTotalVacUsed */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .todayTotalVacUsed
+                                            }
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Total Vaccined used for single
+                                            vaccinated citizen
+                                          </td>
+                                          <td>
+                                            {/* //!total single  */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .totalSingleVacUsed
+                                            }
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Total Vaccined used for double
+                                            vaccinated citizen
+                                          </td>
+                                          <td>
+                                            {/* //!total double */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .totalDoubleVacUsed
+                                            }
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Total Vaccine Used Till Today
+                                          </td>
+                                          <td>
+                                            {/* //!totalVacUsedTillToday */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .totalVacUsedTillToday
+                                            }
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            District
+                                          </td>
+                                          <td>
+                                            {/* //!district */}
+                                            {
+                                              allHospitalResourceData[i]
+                                                .dhodistrict
+                                            }{' '}
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td className="poppins_semibold_600">
+                                            Date of last report
+                                          </td>
+                                          <td>
+                                            {allHospitalResourceData[i].date}
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </Table>
+                                  </ListGroup.Item>
+                                </ListGroup>
                               </>
                             );
                           }

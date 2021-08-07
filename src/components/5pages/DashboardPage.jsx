@@ -499,7 +499,15 @@ const DashboardPage = (props) => {
                 />
               )}
             />
-            <Route exact path="/dho" component={() => <Dho></Dho>} />
+            <Route
+              exact
+              path="/dho"
+              component={() => (
+                <Dho
+                  loggedInHospitalDetail={props.loggedInHospitalDetail}
+                ></Dho>
+              )}
+            />
           </div>
         </div>
       </Router>
