@@ -6,6 +6,9 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 const Dho = () => {
+  //?district of dho from props
+  const dhoDistrict = 'Dhaka';
+
   // ____STATE
   const [todaySingleVacUsed, setTodaySingleVacUsed] = useState(0);
   const [todayDoubleVacUsed, setTodayDoubleVacUsed] = useState(0);
@@ -29,6 +32,7 @@ total double vac used =     ${totalDoubleVacUsed}
     axios
       .post('/api/v1/dho/', {
         data: {
+          dhodistrict: dhoDistrict,
           todaySingleVacUsed: todaySingleVacUsed,
           todayDoubleVacUsed: todayDoubleVacUsed,
           totalSingleVacUsed: totalSingleVacUsed,
@@ -51,23 +55,27 @@ total double vac used =     ${totalDoubleVacUsed}
   const globalFieldHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+    //! today single vac
     if (name === 'today-single-vac') {
       console.log(`today-single-vac ${value}`);
 
       setTodaySingleVacUsed(value);
       console.log(todaySingleVacUsed);
+      //! today double vac
     } else if (name === 'today-double-vac') {
       console.log(`today-double-vac ${value}`);
       setTodayDoubleVacUsed(value);
       console.log(todayDoubleVacUsed);
+      //! total single vac
     } else if (name === 'total-single-vac') {
       console.log(`total-single-vac ${value}`);
       setTotalSingleVacUsed(value);
-      console.log(TotalSingleVacUsed);
+      console.log(totalSingleVacUsed);
+      //! total double vac
     } else if (name === 'total-double-vac') {
       console.log(`total-double-vac ${value}`);
       setTotalDoubleVacUsed(value);
-      console.log(TotalDoubleVacUsed);
+      console.log(totalDoubleVacUsed);
     }
   };
 

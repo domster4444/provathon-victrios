@@ -84,4 +84,26 @@ router.post('/dhoDataSave', (req, res) => {
     });
 });
 
+// ___FOR GETTNG DHO DATA
+
+// !===========================HOSPITAL RESOURCE FILTER BY DISTRICT
+router.post('/dhoDataGet', (req, res) => {
+  dhoDataTemplate
+    .find({ dhodistrict: req.body.dhodistrict })
+    .then((data) => {
+      if (data[0]) {
+        res.status(200).json({
+          message: data,
+        });
+      } else {
+        res.status(200).json({
+          message: [],
+        });
+      }
+    })
+    .catch((error) => {
+      console.log('error occured while finding data');
+    });
+});
+
 module.exports = router;
