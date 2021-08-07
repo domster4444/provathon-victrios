@@ -112,10 +112,12 @@ function HospitalServiceGPiechart(props) {
         <div className="containerCenter">
           <div className="contentBlock">
             <div className="gblPieChartContainer">
+              <h4>
+                <u> Updated On : {props.lastUpdatedOn}</u>{' '}
+              </h4>
               <Bar data={barData} options={barOptions.options} />
               <Pie data={barData2} options={barOptions.options} />
               <Line data={barData3} options={barOptions.options} />
-              <h4>Updated On : {props.lastUpdatedOn}</h4>
             </div>
             <div>
               <Table hover>

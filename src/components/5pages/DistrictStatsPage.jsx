@@ -328,12 +328,8 @@ const DistrictStatsPage = () => {
               />
             </form>
 
-            <button
-              id="findPlasmaPatientBtn"
-              onClick={plasmaFormHandler}
-              class="btn btn-primary"
-            >
-              Find
+            <button id="findPlasmaPatientBtn" onClick={plasmaFormHandler}>
+              <i id="hospitalService-searchIco" class="fas fa-search"></i>
             </button>
           </div>
         </div>

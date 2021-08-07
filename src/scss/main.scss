@@ -46,8 +46,10 @@
 @import '5-modules/experienceSection';
 @import '5-modules/whyChooseUsSection';
 @import '5-modules/plasmaListGroup';
+@import '5-modules/contactUs';
 
 //? 5-PAGES
+@import '6-pages/feedbackPage';
 @import '6-pages/hospitalServicePage';
 @import '6-pages/registerpageI';
 @import '6-pages/loginPageI';
@@ -56,13 +58,20 @@
 @import '6-pages/recoveredPatientBody';
 @import '6-pages/updateResourcePage';
 @import '6-pages/homepage';
+@import '6-pages/ourteampage';
+@import '6-pages/dhoPortal';
 
 @import '5-modules/dashboardNav';
 @import '5-modules/dashboardToolbar';
+
 //! __________BUG FIX
 .contentBlock {
   flex-wrap: wrap;
   display: flex;
   width: 65% !important;
   justify-content: center;
+}
+
+#dashboard-sidebar {
+  height: 88%;
 }

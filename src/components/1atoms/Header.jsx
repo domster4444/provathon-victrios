@@ -84,6 +84,9 @@ export default function Header(props) {
                     </Dropdown.Item> */}
                   </Dropdown.Menu>
                 </Dropdown>
+                <li className="cursor poppins_regular_400">
+                  <Link to="/ourteam">Our Team</Link>
+                </li>
 
                 <li className="cursor poppins_regular_400">
                   <Link to="/login">Login</Link>

@@ -19,6 +19,10 @@ import hospitalPhone from '../../img/serviceLogo/hospitalPhone.png';
 import bedAvailable from '../../img/serviceLogo/bedAvailable.png';
 import oxygenCylinder from '../../img/serviceLogo/oxygenCylinder.png';
 
+// ______FONT AWESOME
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const DashboardBody = () => {
   //* __________________________STATE
   const [allHospitalResourceData, setAllHospitalResourceData] = useState([]);
@@ -240,26 +244,29 @@ const DashboardBody = () => {
 
     //*end point->
     //??? http://localhost:5000/api/hospitalresourcedetail/district
-    axios
-      .post('http://localhost:5000/api/hospitalresourcedetail/district', {
-        data: {
-          district: myDistrict,
-        },
-      })
-      .then((res) => {
-        console.log(res.data.message);
-        setAllHospitalResourceData(res.data.message);
 
-        setAllHospitalResourceDataLoadedState(true);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    setInterval(function () {
+      axios
+        .post('http://localhost:5000/api/hospitalresourcedetail/district', {
+          data: {
+            district: myDistrict,
+          },
+        })
+        .then((res) => {
+          console.log(res.data.message);
+          setAllHospitalResourceData(res.data.message);
+
+          setAllHospitalResourceDataLoadedState(true);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }, 2000);
   };
   return (
     <>
-      <h1 id="hospital-service-page_heading">
-        Here We Can Find Hospital Resource By Districts
+      <h1 id="hospital-service-page_heading" className="title_fontI">
+        Search Hospital By District
       </h1>
       <main id="dashboardBody">
         <div className="containerCenter">
@@ -280,12 +287,8 @@ const DashboardBody = () => {
               />
             </form>
 
-            <button
-              id="findPlasmaPatientBtn"
-              onClick={plasmaFormHandler}
-              class="btn btn-primary"
-            >
-              Find
+            <button id="findPlasmaPatientBtn" onClick={plasmaFormHandler}>
+              <i id="hospitalService-searchIco" class="fas fa-search"></i>
             </button>
             <div className="contentBlock">
               <Accordion
@@ -411,6 +414,17 @@ const DashboardBody = () => {
                                                   {
                                                     allHospitalResourceData[i]
                                                       .noOfTotalCovidPatient
+                                                  }
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td className="poppins_semibold_600">
+                                                  Date of last report
+                                                </td>
+                                                <td>
+                                                  {
+                                                    allHospitalResourceData[i]
+                                                      .date
                                                   }
                                                 </td>
                                               </tr>

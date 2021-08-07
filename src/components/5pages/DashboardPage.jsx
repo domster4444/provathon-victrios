@@ -19,14 +19,16 @@ import UpdateOxyCylBody from './Dashboard/UpdateNoOfCylinder';
 import UpdateBedAvailableBody from './Dashboard/UpdateNoOfBed';
 import UpdateSingleVacPatientBody from './Dashboard/UpdateSingleVacPatient';
 import UpdateDoubleVacPatientBody from './Dashboard/UpdateDoubleVacPatient';
-import UpdateTripleCovidPatientBody from './Dashboard/UpdateTripleVacPatient';
+import UpdateZeroCovidPatientBody from './Dashboard/UpdateZeroVacPatient';
 import UpdateTotalCovidBody from './Dashboard/UpdateTotalCovidPatient';
+import Dho from './Dho';
 
 // ==========IMG
 import hospitalIco from '../../img/generalImage/hospital.png';
 import singleVaccinatedIco from '../../img/DashboardSideIco/singleVaccinatedIco.png';
 import doubleVaccinatedIco from '../../img/DashboardSideIco/doubleVaccinatedIco.png';
 import tripleVaccinatedIco from '../../img/DashboardSideIco/tripleVaccinatedIco.png';
+import dhoIco from '../../img/extra/dho.png';
 
 const DashboardPage = (props) => {
   // __________DATA AVAILABLE
@@ -294,10 +296,14 @@ const DashboardPage = (props) => {
             </Modal>
           </form>
 
-          <div className="sidebar">
+          <div id="dashboard-sidebar" className="sidebar">
             <div className="logo_content">
-              <div className="logo">Our logo</div>
-              <i className="bx bx-menu" id="btn" />
+              <div className="logo">{/*//! Our logo */}</div>
+              <i
+                style={{ cursor: 'pointer' }}
+                className="bx bx-menu"
+                id="btn"
+              />
             </div>
             <ul className="nav_list">
               <li>
@@ -357,9 +363,9 @@ const DashboardPage = (props) => {
                     src={tripleVaccinatedIco}
                     alt=""
                   />
-                  <span className="links_name">Upd. Triple Vaccinated</span>
+                  <span className="links_name">Upd. Zero Vaccinated</span>
                 </Link>
-                <span className="tooltip">Upd. Triple Vaccinated</span>
+                <span className="tooltip">Upd. Zero Vaccinated</span>
               </li>
               <li>
                 <Link to="/update-total-covid-no">
@@ -367,6 +373,23 @@ const DashboardPage = (props) => {
                   <span className="links_name">Upd. Total Covid</span>
                 </Link>
                 <span className="tooltip">Upd. Total Covid</span>
+              </li>
+              <li>
+                <Link to="/dho">
+                  {/* //!dho ico */}
+                  {/* <i class="bx bxs-virus"></i> */}
+                  <img
+                    src={dhoIco}
+                    style={{
+                      marginLeft: '1.8rem',
+                      marginRight: '1.5rem',
+                      height: '2.4rem',
+                    }}
+                    alt=""
+                  />
+                  <span className="links_name">DHO</span>
+                </Link>
+                <span className="tooltip">DHO</span>
               </li>
             </ul>
             <div className="profile_content">
@@ -460,7 +483,7 @@ const DashboardPage = (props) => {
               exact
               path="/update-net-triple-vac-patient"
               component={() => (
-                <UpdateTripleCovidPatientBody
+                <UpdateZeroCovidPatientBody
                   setLoggedInHotpitalPhNo={props.setLoggedInHotpitalPhNo}
                   loggedInHospitalDetail={props.loggedInHospitalDetail}
                 />
@@ -476,6 +499,7 @@ const DashboardPage = (props) => {
                 />
               )}
             />
+            <Route exact path="/dho" component={() => <Dho></Dho>} />
           </div>
         </div>
       </Router>

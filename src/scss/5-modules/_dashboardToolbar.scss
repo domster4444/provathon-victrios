@@ -4,6 +4,14 @@
 
   justify-content: center;
   #dashboard-nav {
+    transform: translateX(-50%);
+    margin-left: 50%;
+    //! dashboard background color is set but since toolbar is transparent
+    background: white !important;
+
+    img {
+      height: 35px;
+    }
     width: 80%;
     padding: 1.5rem 0.5rem;
 

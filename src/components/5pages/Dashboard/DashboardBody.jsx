@@ -291,13 +291,10 @@ const DashboardBody = () => {
               />
             </form>
 
-            <button
-              id="findPlasmaPatientBtn"
-              onClick={plasmaFormHandler}
-              class="btn btn-primary"
-            >
-              Find
+            <button id="findPlasmaPatientBtn" onClick={plasmaFormHandler}>
+              <i id="hospitalService-searchIco" class="fas fa-search"></i>
             </button>
+
             <OverallPieChart
               noOf0DogePatient={noOf0DogePatient}
               noOf1DogePatient={noOf1DogePatient}

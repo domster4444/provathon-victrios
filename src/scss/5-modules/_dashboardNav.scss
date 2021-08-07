@@ -250,7 +250,10 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  //! dahboardNav (Dashboard body color issue
   background-image: url(../img/general/dashboardBgImg.png);
+  // background: rgb(249, 248, 253);
   transition: all 0.5s ease;
 }
 .sidebar.active ~ .home_content {
@@ -269,5 +272,6 @@ body {
 
 .vaccineIco {
   margin: 1.5rem;
-  height: 2rem;
+  height: 2.2rem;
+  margin-left: 1.5rem;
 }

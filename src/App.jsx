@@ -15,6 +15,8 @@ import PageNotFound from './components/5pages/PageNotFound';
 import { useState } from 'react';
 import { css } from 'styled-components';
 import PrivateRoute from './PrivateRoute';
+import OurTeam from './components/5pages/OurTeam';
+
 function App() {
   // _________________STATE FOR ALL HOSPITAL DATA AFTER LOGGEDIN start
 
@@ -77,6 +79,7 @@ function App() {
           path="/hospitalservice"
           component={() => <HospitalService isLoggedInProps={isLoggedIn} />}
         />
+        <Route path="/ourteam" component={() => <OurTeam />} />
         {/* //? merging district stats component within covid status page */}
         {/* <Route
           path="/districtstatspage"

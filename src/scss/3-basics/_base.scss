@@ -74,3 +74,26 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
+#findPlasmaPatientBtn {
+  outline: none;
+  border: none;
+  background: transparent;
+  &:hover {
+    // rgb(73,94,202)
+  }
+}
+//todo : icons
+#hospitalService-searchIco {
+  font-size: 3rem;
+  color: black;
+  transition: all ease-in-out 250ms;
+  &:hover {
+    transition: transform ease-in-out 400ms;
+    transform: scale(1.2);
+    color: rgb(73, 94, 202);
+  }
+  &:active {
+    transform: scale(1);
+  }
+}

@@ -1,11 +1,9 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
-import { toast } from 'react-toastify';
-
 import axios from 'axios';
-
-const UpdateNoOfCylinder = (props) => {
+import { toast } from 'react-toastify';
+const UpdateZeroVacPatient = (props) => {
   let SubmitHandler = (e) => {
     e.preventDefault();
     let updateField = document.getElementById('updateField');
@@ -15,7 +13,7 @@ const UpdateNoOfCylinder = (props) => {
       .patch('http://localhost:5000/api/hospital/resource-update', {
         data: {
           hospitalCode: props.loggedInHospitalDetail.loggedInHospitalCode,
-          updateDirection: 'oxygenCyl',
+          updateDirection: 'zeroVac',
           value: updateValue,
         },
       })
@@ -36,11 +34,11 @@ const UpdateNoOfCylinder = (props) => {
         <div className="contentBlock">
           <Form onSubmit={SubmitHandler}>
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Update Oxygen Cylinder Quantity</Form.Label>
+              <Form.Label>Update No Of Zero Vaccinated Patient</Form.Label>
               <Form.Control
                 id="updateField"
                 type="number"
-                placeholder="Enter No of Oxygen Available In This Hospital"
+                placeholder="Update No Of Zero Vaccinated Patient"
               />
             </Form.Group>
             <Form.Group controlId="formBasicCheckbox"></Form.Group>
@@ -54,4 +52,4 @@ const UpdateNoOfCylinder = (props) => {
   );
 };
 
-export default UpdateNoOfCylinder;
+export default UpdateZeroVacPatient;

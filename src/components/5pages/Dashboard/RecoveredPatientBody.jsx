@@ -281,11 +281,17 @@ const RecoveredPatientBody = (props) => {
       <main id="recoveredPatientBody">
         <div className="containerCenter">
           <div className="contentBlock">
-            <Form onSubmit={globalPatientRecoveredFormHandler}>
+            <Form
+              id="patient-recovered-form"
+              onSubmit={globalPatientRecoveredFormHandler}
+            >
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>Patient Name</Form.Label>
+                  <Form.Label className="poppins_regular_400">
+                    Patient Name
+                  </Form.Label>
                   <Form.Control
+                    className="poppins_regular_400"
                     id="patient-name"
                     required
                     type="text"
@@ -294,8 +300,11 @@ const RecoveredPatientBody = (props) => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Label>Total Vaccine Doge He Took</Form.Label>
+                  <Form.Label className="poppins_regular_400">
+                    Total Vaccine Doge He Took
+                  </Form.Label>
                   <Form.Control
+                    className="poppins_regular_400"
                     id="patient-doge"
                     required
                     type="text"
@@ -304,9 +313,11 @@ const RecoveredPatientBody = (props) => {
                 </Form.Group>
               </Form.Row>
 
-              <Form.Row>
+              <Form.Row style={{ marginTop: '2rem', marginBottom: '2rem' }}>
                 <Form.Group as={Col} controlId="formGridCity">
-                  <Form.Label>Patient HomeTown District</Form.Label>
+                  <Form.Label className="poppins_regular_400">
+                    Patient HomeTown District
+                  </Form.Label>
 
                   <form autocomplete="off">
                     <div
@@ -315,6 +326,7 @@ const RecoveredPatientBody = (props) => {
                       style={{ width: '300px' }}
                     />
                     <Form.Control
+                      className="poppins_regular_400"
                       required
                       id="myInput"
                       type="text"
@@ -324,8 +336,11 @@ const RecoveredPatientBody = (props) => {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridZip">
-                  <Form.Label>Patient ID </Form.Label>
+                  <Form.Label className="poppins_regular_400">
+                    Patient ID{' '}
+                  </Form.Label>
                   <Form.Control
+                    className="poppins_regular_400"
                     id="patient-id"
                     required
                     type="text"
@@ -334,7 +349,12 @@ const RecoveredPatientBody = (props) => {
                 </Form.Group>
               </Form.Row>
 
-              <Button id="recoveredSubmitBtn" variant="primary" type="submit">
+              <Button
+                id="recoveredSubmitBtn"
+                className="poppins_regular_400"
+                variant="primary"
+                type="submit"
+              >
                 Submit
               </Button>
             </Form>
